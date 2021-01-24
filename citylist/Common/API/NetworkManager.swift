@@ -48,4 +48,28 @@ class NetworkManager: NSObject {
         })
     }
     
+    func getRating(completion: @escaping (Rating?, Error?) -> Void) {
+        request(url: "https://bit.ly/39beec8", completion: { data, error in
+            guard let data = data else {
+                completion(nil, error)
+                return
+            }
+            
+            let parsedData = try? JSONDecoder().decode(Rating.self, from: data)
+            completion(parsedData, nil)
+        })
+    }
+    
+    func getVisitors(completion: @escaping ([String]?, Error?) -> Void) {
+        request(url: "https://bit.ly/367XctC", completion: { data, error in
+            guard let data = data else {
+                completion(nil, error)
+                return
+            }
+            
+            let parsedData = try? JSONDecoder().decode([String].self, from: data)
+            completion(parsedData, nil)
+        })
+    }
+    
 }

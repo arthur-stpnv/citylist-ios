@@ -15,6 +15,10 @@
 		C17A826725BC70A500F27638 /* CityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A826625BC70A500F27638 /* CityTableViewCell.swift */; };
 		C1849EF225BC4B1200FB1D68 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1849EF125BC4B1200FB1D68 /* BaseViewController.swift */; };
 		C189882C25BD93A400CDAD25 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C189882B25BD93A400CDAD25 /* UserDefaultsManager.swift */; };
+		C189883A25BDAFF100CDAD25 /* Rating.swift in Sources */ = {isa = PBXBuildFile; fileRef = C189883925BDAFF100CDAD25 /* Rating.swift */; };
+		C189885825BDB39900CDAD25 /* CityVisitorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C189885725BDB39900CDAD25 /* CityVisitorsViewController.swift */; };
+		C189885D25BDB80300CDAD25 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C189885C25BDB80300CDAD25 /* AlertViewController.swift */; };
+		C189886225BDBA5000CDAD25 /* UIColor+AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C189886125BDBA5000CDAD25 /* UIColor+AppColors.swift */; };
 		C191E53625BC4A50005F3853 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C191E53525BC4A50005F3853 /* AppDelegate.swift */; };
 		C191E53825BC4A50005F3853 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C191E53725BC4A50005F3853 /* SceneDelegate.swift */; };
 		C191E53A25BC4A50005F3853 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C191E53925BC4A50005F3853 /* ListViewController.swift */; };
@@ -51,6 +55,10 @@
 		C17A826625BC70A500F27638 /* CityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityTableViewCell.swift; sourceTree = "<group>"; };
 		C1849EF125BC4B1200FB1D68 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		C189882B25BD93A400CDAD25 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		C189883925BDAFF100CDAD25 /* Rating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rating.swift; sourceTree = "<group>"; };
+		C189885725BDB39900CDAD25 /* CityVisitorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CityVisitorsViewController.swift; path = ../../../../../../CityVisitorsViewController.swift; sourceTree = "<group>"; };
+		C189885C25BDB80300CDAD25 /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
+		C189886125BDBA5000CDAD25 /* UIColor+AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+AppColors.swift"; sourceTree = "<group>"; };
 		C191E53225BC4A50005F3853 /* citylist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = citylist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C191E53525BC4A50005F3853 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C191E53725BC4A50005F3853 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +105,7 @@
 			children = (
 				C11FC15E25BC55EB005E778F /* UIView+Constraints.swift */,
 				C17A826025BC6E3400F27638 /* UIImageView+LoadImage.swift */,
+				C189886125BDBA5000CDAD25 /* UIColor+AppColors.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -113,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				C11FC17925BC645F005E778F /* City.swift */,
+				C189883925BDAFF100CDAD25 /* Rating.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -148,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				C1849EF125BC4B1200FB1D68 /* BaseViewController.swift */,
+				C189885C25BDB80300CDAD25 /* AlertViewController.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -160,6 +171,7 @@
 				C191E53B25BC4A50005F3853 /* City.storyboard */,
 				C191E53925BC4A50005F3853 /* ListViewController.swift */,
 				C1074CE925BD8E4500655C09 /* CityDetailsViewController.swift */,
+				C189885725BDB39900CDAD25 /* CityVisitorsViewController.swift */,
 			);
 			path = City;
 			sourceTree = "<group>";
@@ -354,14 +366,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C189883A25BDAFF100CDAD25 /* Rating.swift in Sources */,
+				C189885D25BDB80300CDAD25 /* AlertViewController.swift in Sources */,
 				C17A826725BC70A500F27638 /* CityTableViewCell.swift in Sources */,
 				C17A826125BC6E3400F27638 /* UIImageView+LoadImage.swift in Sources */,
 				C1074CEA25BD8E4500655C09 /* CityDetailsViewController.swift in Sources */,
+				C189885825BDB39900CDAD25 /* CityVisitorsViewController.swift in Sources */,
 				C11FC17425BC62C8005E778F /* NetworkManager.swift in Sources */,
 				C189882C25BD93A400CDAD25 /* UserDefaultsManager.swift in Sources */,
 				C191E53A25BC4A50005F3853 /* ListViewController.swift in Sources */,
 				C1849EF225BC4B1200FB1D68 /* BaseViewController.swift in Sources */,
 				C11FC15F25BC55EB005E778F /* UIView+Constraints.swift in Sources */,
+				C189886225BDBA5000CDAD25 /* UIColor+AppColors.swift in Sources */,
 				C191E53625BC4A50005F3853 /* AppDelegate.swift in Sources */,
 				C191E53825BC4A50005F3853 /* SceneDelegate.swift in Sources */,
 				C11FC17A25BC645F005E778F /* City.swift in Sources */,

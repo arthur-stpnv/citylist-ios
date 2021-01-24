@@ -21,7 +21,7 @@ class ListViewController: BaseViewController {
     }()
     
     private lazy var filterButton: UIBarButtonItem = {
-        let button = UIBarButtonItem(title: "Filter", style: .plain, target: self, action: #selector(filterButtonTouched))
+        let button = UIBarButtonItem(title: "Filter", style: .plain, target: self, action: #selector(filterButtonTouched(_:)))
         return button
     }()
     
@@ -50,9 +50,11 @@ class ListViewController: BaseViewController {
     // MARK: Methods
     
     private func loadData() {
-        NetworkManager.shared.loadCities(completion: { cityList, error in
+        showWaiting()
+        NetworkManager.shared.loadCities(completion: { [weak self] cityList, error in
+            self?.hideWaiting()
             guard let cityList = cityList else {
-                // TODO: show error
+                self?.showError(error)
                 return
             }
             
