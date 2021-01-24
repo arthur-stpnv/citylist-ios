@@ -59,6 +59,22 @@
             </objects>
             <point key="canvasLocation" x="1459" y="133"/>
         </scene>
+        <!--City Visitors View Controller-->
+        <scene sceneID="N4A-ZN-gYS">
+            <objects>
+                <viewController storyboardIdentifier="CityVisitorsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Rc1-Hf-VTz" customClass="CityVisitorsViewController" customModule="citylist" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="d9I-hW-79i">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="uku-Wc-nW7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="6eY-4f-tbt"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aBB-hg-lRp" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2228" y="133"/>
+        </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">

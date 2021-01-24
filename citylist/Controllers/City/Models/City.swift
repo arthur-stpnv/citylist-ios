@@ -19,9 +19,9 @@ struct City: Decodable {
     }
     
     var visitors: [String]?
-    var rating: Float?
+    var rating: Double?
     
-    // MARK: Parcing
+    // MARK: Parsing
     
     enum CodingKeys: String, CodingKey {
         case id, title, icon
