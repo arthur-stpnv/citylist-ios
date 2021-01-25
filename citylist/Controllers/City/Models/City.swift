@@ -27,6 +27,12 @@ struct City: Decodable {
         case id, title, icon
     }
     
+    init(testId: String) {
+        id = testId
+        title = "test city"
+        icon = ""
+    }
+    
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         id = try container.decode(String.self, forKey: .id)
