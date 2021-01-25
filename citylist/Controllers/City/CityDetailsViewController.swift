@@ -107,10 +107,8 @@ class CityDetailsViewController: BaseViewController {
                 return
             }
             
-            DispatchQueue.main.async { [weak self] in
-                self?.city?.rating = rating.rating
-                group.leave()
-            }
+            self?.city?.rating = rating.rating
+            group.leave()
         })
         
         group.enter()
@@ -121,10 +119,8 @@ class CityDetailsViewController: BaseViewController {
                 return
             }
             
-            DispatchQueue.main.async { [weak self] in
-                self?.city?.visitors = visitors
-                group.leave()
-            }
+            self?.city?.visitors = visitors
+            group.leave()
         })
         
         group.notify(queue: .main, execute: { [weak self] in

@@ -19,19 +19,23 @@ class NetworkManager: NSObject {
             return
         }
         
-        URLSession.shared.dataTask(with: requestUrl, completionHandler: { data, response, error in
-            guard let data = data else {
-                completion(nil, error)
-                return
-            }
-            
-            guard let response = response as? HTTPURLResponse, (200...299).contains(response.statusCode) else {
-                completion(nil, error)
-                return
-            }
-            
-            completion(data, nil)
-        }).resume()
+        DispatchQueue.global().async {
+            URLSession.shared.dataTask(with: requestUrl, completionHandler: { data, response, error in
+                DispatchQueue.main.async {
+                    guard let data = data else {
+                        completion(nil, error)
+                        return
+                    }
+                    
+                    guard let response = response as? HTTPURLResponse, (200...299).contains(response.statusCode) else {
+                        completion(nil, error)
+                        return
+                    }
+                    
+                    completion(data, nil)
+                }
+            }).resume()
+        }
     }
     
     // MARK: Methods

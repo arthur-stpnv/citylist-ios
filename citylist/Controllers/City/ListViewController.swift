@@ -58,11 +58,9 @@ class ListViewController: BaseViewController {
                 return
             }
             
-            DispatchQueue.main.async { [weak self] in
-                self?.cities = cityList
-                self?.filteredCitites = cityList
-                self?.contentTableView.reloadData()
-            }
+            self?.cities = cityList
+            self?.filteredCitites = cityList
+            self?.contentTableView.reloadData()
         })
     }
     
