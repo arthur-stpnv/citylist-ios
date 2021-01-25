@@ -33,7 +33,6 @@ class CityDetailsViewController: BaseViewController {
         button.setTitleColor(.white, for: .normal)
         button.backgroundColor = .blueButton
         button.layer.cornerRadius = 5
-        button.setTitle("View visitors", for: .normal)
         button.addTarget(self, action: #selector(visitorsButtonTouched(_:)), for: .touchUpInside)
         return button
     }()
@@ -89,6 +88,7 @@ class CityDetailsViewController: BaseViewController {
         iconImageView.setImage(url: city.icon)
         titleLabel.text = city.title
         ratingLabel.text = "Rating: \(city.rating ?? 0.0)"
+        visitorsButton.setTitle("View visitors (\(city.visitors?.count ?? 0))", for: .normal)
         visitorsButton.isHidden = false
     }
     
